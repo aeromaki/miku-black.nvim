@@ -161,7 +161,7 @@ local theme = lush(function(injected_functions)
     NonText        { Comment }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 
     Title          { Normal, gui = 'bold' }, -- Titles for output from ":set all", ":autocmd" etc.
-    Visual         { bg = blue, fg = back }, -- Visual mode selection
+    Visual         { bg = green, fg = back }, -- Visual mode selection
     -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg     { fg = blue }, -- Warning messages
     Whitespace     { Normal }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
