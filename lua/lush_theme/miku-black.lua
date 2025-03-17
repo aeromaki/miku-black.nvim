@@ -122,14 +122,14 @@ local theme = lush(function(injected_functions)
     Special        { fg = blue }, -- (*) Any special symbol
     -- SpecialChar    { }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
-    Delimiter      { Normal }, --   Character that needs attention
+    Delimiter      { fg = fore }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
     -- Debug          { }, --   Debugging statements
 
     Underlined     { fg = blue, gui = "underline" }, -- Text that stands out, HTML links
-    Ignore         { Normal }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
+    Ignore         { fg = fore }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
     Error          { ErrorMsg }, -- Any erroneous construct
-    Todo           { Normal, gui = "bold" }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo           { fg = fore, gui = "bold" }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 
     
@@ -156,20 +156,20 @@ local theme = lush(function(injected_functions)
 
     MatchParen     { bg = fore, fg = back, gui = 'bold italic' }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg        { fg = blue }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea        { Normal }, -- Area for messages and cmdline
+    MsgArea        { fg = fore }, -- Area for messages and cmdline
     MsgSeparator   { bg = fore, fg = back }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg        { ModeMsg }, -- |more-prompt|
     NonText        { Comment }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 
-    Title          { Normal, gui = 'bold' }, -- Titles for output from ":set all", ":autocmd" etc.
+    Title          { fg = fore, gui = 'bold' }, -- Titles for output from ":set all", ":autocmd" etc.
     Visual         { bg = green, fg = back }, -- Visual mode selection
     -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg     { fg = blue }, -- Warning messages
-    Whitespace     { Normal }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    Whitespace     { fg = fore }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     Winseparator   { VertSplit }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
     WildMenu       { bg = blue, fg = back }, -- Current match in 'wildmenu' completion
     WinBar         { Title }, -- Window bar of current window
-    WinBarNC       { Normal }, -- Window bar of not-current windows
+    WinBarNC       { fg = fore }, -- Window bar of not-current windows
 
     NormalFloat    { bg = fl, fg = fore }, -- Normal text in floating windows.
     FloatBorder    { NormalFloat }, -- Border of floating windows.
@@ -186,7 +186,7 @@ local theme = lush(function(injected_functions)
     Question       { fg = blue }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine   { fg = blue }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 
-    SpecialKey     { Normal, gui = 'italic underline' }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
+    SpecialKey     { fg = fore, gui = 'italic underline' }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad       { SpecialKey }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap       { SpecialKey }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal     { SpecialKey }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -218,9 +218,9 @@ local theme = lush(function(injected_functions)
     --
     DiagnosticError            { fg = red } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
     DiagnosticWarn             { fg = blue } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticInfo             { Normal } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticInfo             { fg = fore } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
     DiagnosticHint             { fg = green } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticOk               { Normal } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticOk               { fg = fore } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
     -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
     -- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
     -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
