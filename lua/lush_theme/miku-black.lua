@@ -55,6 +55,7 @@ local green = hsl('#13868c')
 local blue = hsl('#39c5bb')
 
 local com = hsl('#323232')
+local fl = hsl('#212121')
 
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -174,7 +175,7 @@ local theme = lush(function(injected_functions)
     FloatBorder    { Normal }, -- Border of floating windows.
     FloatTitle     { Title }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
-    Pmenu          { bg = green, fg = back }, -- Popup menu: Normal item.
+    Pmenu          { bg = fl, fg = fore }, -- Popup menu: Normal item.
     PmenuSel       { bg = blue, fg = back }, -- Popup menu: Selected item.
     -- PmenuKind      { }, -- Popup menu: Normal item "kind"
     -- PmenuKindSel   { }, -- Popup menu: Selected item "kind"
