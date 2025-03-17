@@ -141,7 +141,7 @@ local theme = lush(function(injected_functions)
 
     ColorColumn    { bg = cursorLine }, -- Columns set with 'colorcolumn'
     Conceal        { Comment }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor         { bg = fore, fg = back }, -- Character under the cursor
+    Cursor         { bg = green, fg = back }, -- Character under the cursor
     lCursor        { Cursor }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
     -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
 
