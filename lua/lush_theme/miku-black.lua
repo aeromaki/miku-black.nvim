@@ -99,7 +99,7 @@ local theme = lush(function(injected_functions)
     Identifier     { fg = blue }, -- (*) Any variable name
     Function       { Identifier }, --   Function name (also: methods for classes)
 
-    Statement      { fg = red, gui = 'bold' }, -- (*) Any statement
+    Statement      { fg = red }, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
@@ -113,12 +113,12 @@ local theme = lush(function(injected_functions)
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    Type           { fg = blue, gui = 'bold' }, -- (*) int, long, char, etc.
+    Type           { fg = blue }, -- (*) int, long, char, etc.
     -- StorageClass   { }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
-    Special        { fg = green }, -- (*) Any special symbol
+    Special        { fg = blue }, -- (*) Any special symbol
     -- SpecialChar    { }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     Delimiter      { Normal }, --   Character that needs attention
