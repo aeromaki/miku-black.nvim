@@ -154,7 +154,7 @@ local theme = lush(function(injected_functions)
     -- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
     CursorLineSign { Comment }, -- Like SignColumn when 'cursorline' is set for the cursor line
 
-    MatchParen     { bg = blue, fg = back, gui = 'bold' }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen     { bg = red, fg = back, gui = 'bold italic' }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg        { fg = blue }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea        { Normal }, -- Area for messages and cmdline
     MsgSeparator   { bg = fore, fg = back }, -- Separator for scrolled messages, `msgsep` flag of 'display'
