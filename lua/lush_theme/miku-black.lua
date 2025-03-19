@@ -48,13 +48,12 @@ local hsl = lush.hsl
 
 local back = hsl('#101010')
 local fore = hsl('#d9d9d9')
-local cursorLine = hsl('#0B0B0B')
 
 local red = hsl('#e24673')
 local green = hsl('#13868c')
 local blue = hsl('#39c5bb')
 
-local com = hsl('#323232')
+local com = hsl('#434343')
 local fl = hsl('#212121')
 
 
@@ -67,7 +66,7 @@ local theme = lush(function(injected_functions)
 
 
     Normal         { bg = back, fg = fore }, -- Normal text
-    CursorLine     { bg = cursorLine }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorLine     { bg = fl }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     CursorColumn   { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 
     LineNr         { fg = com }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -140,7 +139,7 @@ local theme = lush(function(injected_functions)
     -- Substitute     { }, -- |:substitute| replacement text highlighting
 
 
-    ColorColumn    { bg = cursorLine }, -- Columns set with 'colorcolumn'
+    ColorColumn    { bg = fl }, -- Columns set with 'colorcolumn'
     Conceal        { Comment }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor         { bg = green, fg = back }, -- Character under the cursor
     lCursor        { Cursor }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -193,8 +192,8 @@ local theme = lush(function(injected_functions)
     SpellRare      { SpecialKey }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
 
     StatusLine     { bg = fore }, -- Status line of current window
-    StatusLineNC   { bg = cursorLine }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    TabLine        { bg = cursorLine, fg = com }, -- Tab pages line, not active tab page label
+    StatusLineNC   { bg = fl }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    TabLine        { bg = fl, fg = com }, -- Tab pages line, not active tab page label
     TabLineFill    { bg = back }, -- Tab pages line, where there are no labels
     TabLineSel     { bg = back, fg = fore, gui = 'bold' }, -- Tab pages line, active tab page label
 
